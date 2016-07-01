@@ -102,17 +102,77 @@
     " General {
         if count(g:spf13_bundle_groups, 'general')
             Bundle 'scrooloose/nerdtree'
+            "The NERD tree allows you to explore your filesystem and to open
+            "files and directories. It presents the filesystem to you in the
+            "form of a tree which you manipulate with the keyboard and/or
+            "mouse. It also allows you to perform simple filesystem
+            "operations.
+
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'spf13/vim-colors'
+
             Bundle 'tpope/vim-surround'
+            "Surround.vim is all about "surroundings": parentheses, brackets,
+            "quotes, XML tags, and more. The plugin provides mappings to
+            "easily delete, change and add such surroundings in pairs.
+
             Bundle 'tpope/vim-repeat'
+            "If you've ever tried using the . command after a plugin map, you
+            "were likely disappointed to discover it only repeated the last
+            "native command inside that map, rather than the map as a whole.
+            "That disappointment ends today. Repeat.vim remaps . in a way that
+            "plugins can tap into it.
+
             Bundle 'rhysd/conflict-marker.vim'
+            "conflict-marker.vim is Vim plugin for developers fighting against
+            "conflicts. All features are available if and only if an opened
+            "buffer contains a conflict marker.
+            "
+            "conflict-marker.vim does:
+            "
+            "   highlight conflict markers.
+            "   jump among conflict markers.
+            "   jump within conflict block; beginning, separator and end of the block.
+            "   resolve conflict with various strategies; themselves, ourselves, none and both strategies.
+
             Bundle 'jiangmiao/auto-pairs'
+            "Insert or delete brackets, parens, quotes in pair.
+
             Bundle 'ctrlpvim/ctrlp.vim'
+            "Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+
             Bundle 'tacahiroy/ctrlp-funky'
+            "This is a ctrlp.vim extension. It simply navigates and jumps to
+            "function definitions from the current file without ctags. It just
+            "searches function definitions or equivalent lines using regular
+            "expressions, therefore some languages' abstraction aren't
+            "accurate because of hard to parse.
+
             Bundle 'terryma/vim-multiple-cursors'
+            "There have been many attempts at bringing Sublime Text's awesome
+            "multiple selection feature into Vim, but none so far have been in
+            "my opinion a faithful port that is simplistic to use, yet
+            "powerful and intuitive enough for an existing Vim user.
+            "vim-multiple-cursors is yet another attempt at that.
+
             Bundle 'vim-scripts/sessionman.vim'
+            "Vim provides a ':mksession' command to save the current editing
+            "session.  This plug-in helps to work with Vim sessions by keeping
+            "them in the dedicated location and by providing commands to list
+            "all sessions, open session, open last session, close session,
+            "save session and show last session.  From a list of sessions you
+            "can open session, delete session, edit session and edit extra
+            "session script.  Please note that session name can contain spaces
+            "and does not have to have a .vim extension.
+
             Bundle 'matchit.zip'
+            "The matchit.vim script allows you to configure % to match more
+            "than just
+            "single characters.  You can match words and even regular
+            "expressions.
+            "Also, matching treats strings and comments (as recognized by the
+            "syntax highlighting mechanism) intelligently.
+
             if (has("python") || has("python3")) && exists('g:spf13_use_powerline') && !exists('g:spf13_use_old_powerline')
                 Bundle 'Lokaltog/powerline', {'rtp':'/powerline/bindings/vim'}
             elseif exists('g:spf13_use_powerline') && exists('g:spf13_use_old_powerline')
@@ -123,29 +183,127 @@
             endif
             Bundle 'powerline/fonts'
             Bundle 'bling/vim-bufferline'
+            "airline: Lean & mean status/tabline for vim that's light as air.
+
             Bundle 'easymotion/vim-easymotion'
+            "EasyMotion provides a much simpler way to use some motions in
+            "vim. It takes the <number> out of <number>w or <number>f{char} by
+            "highlighting all possible choices and allowing you to press one
+            "key to jump directly to the target.
+            "
+            "When one of the available motions is triggered, all visible text
+            "preceding or following the cursor is faded, and motion targets
+            "are highlighted.
+            "
+            "EasyMotion is triggered by the provided mappings. This readme
+            "only covers the basics; please refer to :help easymotion.txt to
+            "see all the available mappings.
+
             Bundle 'jistr/vim-nerdtree-tabs'
+            "This plugin aims at making NERDTree feel like a true panel,
+            "independent of tabs.
+            "
+            "Just one NERDTree, always and ever. It will always look the same
+            "in all tabs, including expanded/collapsed nodes, scroll position
+            "etc.
+            "
+            "Open in all tabs / close in all tabs. Do this via
+            ":NERDTreeTabsToggle
+            "
+            "Meaningful tab captions for inactive tabs. No more captions like
+            "'NERD_tree_1'.
+            "
+            "When you close a file, the tab closes with it. No NERDTree
+            "hanging open.
+            "
+            "Autoopen NERDTree on GVim / MacVim startup.
+            "
+            "Many of these features can be switched off. See section
+            "Configuration.
+
             Bundle 'flazz/vim-colorschemes'
+            "one stop shop for vim colorschemes.
+            "
+            "this is harvested from vim.org. only colorschemes downloaded in a
+            "single .vim file are included.
+            "
+            "for hacking on vim.org harvesting see the branch prep.
+
             Bundle 'mbbill/undotree'
+            "The ultimate undo history visualizer for VIM
+
             Bundle 'nathanaelkane/vim-indent-guides'
+            "Indent Guides is a plugin for visually displaying indent levels in Vim.
+
             if !exists('g:spf13_no_views')
                 Bundle 'vim-scripts/restore_view.vim'
+                "This is plugin for automatically restore one file's cursor
+                "position and folding information after restart vim.
             endif
+
             Bundle 'mhinz/vim-signify'
+            "Signify (or just Sy) is a quite unobtrusive plugin. It uses signs
+            "to indicate added, modified and removed lines based on data of an
+            "underlying version control system.
+            "
+            "It's fast, easy to use and well documented.
+            "
+            "NOTE: If git is the only version control system you use, I
+            "suggest having a look at vim-gitgutter. It provides more
+            "git-specific features that would be unfeasible for Sy, since it
+            "only implements features that work for all supported VCS.
+
             Bundle 'tpope/vim-abolish.git'
+            "I sat on this plugin for 3 years before releasing it, primarily
+            "because it's so gosh darn hard to explain. It's three
+            "superficially unrelated plugins in one that share a common theme:
+            "working with variants of a word.
+
             Bundle 'osyo-manga/vim-over'
+            ":substitue preview
+
             Bundle 'kana/vim-textobj-user'
+            "vim-textobj-user is a Vim plugin to create your own text objects
+            "without pain. It is hard to create text objects, because there
+            "are many pitfalls to deal with. This plugin hides such details
+            "and provides a declarative way to define text objects. You can
+            "use regular expressions to define simple text objects, or use
+            "functions to define complex ones.
+            "
+            "Other vim-textobj-xxx is something like this.
+
             Bundle 'kana/vim-textobj-indent'
             Bundle 'gcmt/wildfire.vim'
+            "With Wildfire you can quickly select the closest text object
+            "among a group of candidates.
+            "
+            "Learn more about text objects with :help text-objects.
         endif
     " }
 
     " Writing {
         if count(g:spf13_bundle_groups, 'writing')
             Bundle 'reedes/vim-litecorrect'
+            "Lightweight auto-correction for Vim
+            "
+            "We type teh when we meant to type the. This plugin is to help us
+            "catch the most common of these typos and correct each upon
+            "hitting the space bar (or non-keyword character.)
+
             Bundle 'reedes/vim-textobj-sentence'
             Bundle 'reedes/vim-textobj-quote'
+
             Bundle 'reedes/vim-wordy'
+            "wordy is not a grammar checker. Nor is it a guide to proper word
+            "usage. Rather, wordy is a lightweight tool to assist you in
+            "identifying those words and phrases known for their history of
+            "misuse, abuse, and overuse, at least according to usage experts.
+            "
+            "For example, if wordy highlights moreover in your document, a
+            "word for which no good usage exists, you should consider a
+            "rewrite to eliminate it. But if wordy highlights therefore in a
+            "sentence where you can demonstrate the usage is sound, you can
+            "elect to keep it —wordy be damned.
         endif
     " }
 
@@ -153,15 +311,69 @@
         if count(g:spf13_bundle_groups, 'programming')
             " Pick one of the checksyntax, jslint, or syntastic
             Bundle 'scrooloose/syntastic'
+            "Syntastic is a syntax checking plugin for Vim that runs files
+            "through external syntax checkers and displays any resulting
+            "errors to the user. This can be done on demand, or automatically
+            "as files are saved. If syntax errors are detected, the user is
+            "notified and is happy because they didn't have to compile their
+            "code or execute their script to find them.
+
             Bundle 'tpope/vim-fugitive'
+            "I'm not going to lie to you; fugitive.vim may very well be the
+            "best Git wrapper of all time.
+
             Bundle 'mattn/webapi-vim'
+            "An Interface to WEB APIs.
+
             Bundle 'mattn/gist-vim'
+            "This is a vimscript for creating gists (http://gist.github.com).
+
             Bundle 'scrooloose/nerdcommenter'
+            "Vim plugin for intensely orgasmic commenting
+
             Bundle 'tpope/vim-commentary'
+            "Comment stuff out. Use gcc to comment out a line (takes a count),
+            "gc to comment out the target of a motion (for example, gcap to
+            "comment out a paragraph), gc in visual mode to comment out the
+            "selection, and gc in operator pending mode to target a comment.
+            "You can also use it as a command, either with a range like
+            ":7,17Commentary, or as part of a :global invocation like with
+            ":g/TODO/Commentary. That's it.
+            "
+            "I wrote this because 5 years after Vim added support for mapping
+            "an operator, I still couldn't find a commenting plugin that
+            "leveraged that feature (I overlooked tcomment.vim). Striving for
+            "minimalism, it weighs in at under 100 lines of code.
+            "
+            "Oh, and it uncomments, too. The above maps actually toggle, and
+            "gcgc uncomments a set of adjacent commented lines.
+
             Bundle 'godlygeek/tabular'
+            "Sometimes, it's useful to line up text. Naturally, it's nicer to
+            "have the computer do this for you, since aligning things by hand
+            "quickly becomes unpleasant. While there are other plugins for
+            "aligning text, the ones I've tried are either impossibly
+            "difficult to understand and use, or too simplistic to handle
+            "complicated tasks. This plugin aims to make the easy things easy
+            "and the hard things possible, without providing an unnecessarily
+            "obtuse interface. It's still a work in progress, and criticisms
+            "are welcome.
+
             Bundle 'luochen1990/rainbow'
+            "As everyone knows, the most complex codes were composed of a mass
+            "of different kinds of parentheses(typically: lisp). This plugin
+            "will help you read these codes by showing different levels of
+            "parentheses in different colors. you can also find this plugin in
+            "www.vim.org.
+
             if executable('ctags')
                 Bundle 'majutsushi/tagbar'
+                "Tagbar is a Vim plugin that provides an easy way to browse
+                "the tags of the current file and get an overview of its
+                "structure. It does this by creating a sidebar that displays
+                "the ctags-generated tags of the current file, ordered by
+                "their scope. This means that for example methods in C++ are
+                "displayed under the class they are defined in.
             endif
         endif
     " }
@@ -176,8 +388,24 @@
             endif
         elseif count(g:spf13_bundle_groups, 'youcompleteme')
             Bundle 'Valloric/YouCompleteMe'
+            "YouCompleteMe is a fast, as-you-type, fuzzy-search code
+            "completion engine for Vim.
+
             Bundle 'SirVer/ultisnips'
+            "UltiSnips is the ultimate solution for snippets in Vim. It has
+            "tons of features and is very fast.
+
             Bundle 'honza/vim-snippets'
+            "This repository contains snippets files for various programming
+            "languages.
+            "
+            "It is community-maintained and many people have contributed
+            "snippet files and other improvements already.
+            "
+            "Contents
+            "
+            "snippets/*: snippets using snipMate format
+            "UltiSnips/*: snippets using UltiSnips format
         elseif count(g:spf13_bundle_groups, 'neocomplcache')
             Bundle 'Shougo/neocomplcache'
             Bundle 'Shougo/neosnippet'
@@ -285,12 +513,38 @@
     " Misc {
         if count(g:spf13_bundle_groups, 'misc')
             Bundle 'rust-lang/rust.vim'
+            "This is a vim plugin that provides Rust file detection, syntax
+            "highlighting, and (optional) autoformatting.
+
             Bundle 'tpope/vim-markdown'
+            "This is the development version of Vim's included syntax
+            "highlighting and filetype plugins for Markdown. Generally you
+            "don't need to install these if you are running a recent version
+            "of Vim.
+
             Bundle 'spf13/vim-preview'
+            "Preview plugin is a tool developed to help you to preview markup
+            "files such as .markdown, .rdoc, .textile and .html when you are
+            "editing them. It builds html files and opens them in your
+            "browser.
+
             Bundle 'tpope/vim-cucumber'
+            "This is the development version of Vim's included runtime files
+            "for the Ruby acceptance testing framework Cucumber. It provides
+            "syntax highlighting, indenting, and some editing commands.
+
             Bundle 'cespare/vim-toml'
+            "Vim syntax for TOML.
+
             Bundle 'quentindecock/vim-cucumber-align-pipes'
+            "What it does: Aligns pipes when you are editing Cucumber tables.
+            "
+            "Makes that popular gist a VIM plugin.
+            "
+            "Warning: It is dependant on Tabularize
+
             Bundle 'saltstack/salt-vim'
+            "Vim files for working on Salt files
         endif
     " }
 
