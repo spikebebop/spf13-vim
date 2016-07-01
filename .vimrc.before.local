@@ -30,7 +30,11 @@
 " }
 
 " User Local Before Settings {
+"
+"   Customizations by yangao118@gmail.com
 
     let g:spf13_keep_trailing_whitespace = 1
+
+    let g:spf13_bundle_groups=['general', 'writing', 'youcompleteme', 'programming', 'python', 'html', 'misc',]
 
 " }

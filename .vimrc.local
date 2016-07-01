@@ -30,6 +30,8 @@
 " }
 
 " User Local Settings {
+"
+" Customizations by yangao118@gmail.com
 
     set nospell
 
@@ -38,6 +40,12 @@
     " indent_guides {
 
         let g:indent_guides_enable_on_vim_startup = 0
+
+    "}
+
+    " snippets & autocomplete {
+
+        let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
     "}
 
