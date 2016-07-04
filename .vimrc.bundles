@@ -148,7 +148,7 @@
             "expressions, therefore some languages' abstraction aren't
             "accurate because of hard to parse.
 
-            Bundle 'terryma/vim-multiple-cursors'
+            UnBundle 'terryma/vim-multiple-cursors'
             "There have been many attempts at bringing Sublime Text's awesome
             "multiple selection feature into Vim, but none so far have been in
             "my opinion a faithful port that is simplistic to use, yet
@@ -165,7 +165,7 @@
             "session script.  Please note that session name can contain spaces
             "and does not have to have a .vim extension.
 
-            Bundle 'matchit.zip'
+            UnBundle 'matchit.zip'
             "The matchit.vim script allows you to configure % to match more
             "than just
             "single characters.  You can match words and even regular
@@ -232,7 +232,7 @@
             Bundle 'mbbill/undotree'
             "The ultimate undo history visualizer for VIM
 
-            Bundle 'nathanaelkane/vim-indent-guides'
+            UnBundle 'nathanaelkane/vim-indent-guides'
             "Indent Guides is a plugin for visually displaying indent levels in Vim.
 
             if !exists('g:spf13_no_views')
@@ -253,7 +253,7 @@
             "git-specific features that would be unfeasible for Sy, since it
             "only implements features that work for all supported VCS.
 
-            Bundle 'tpope/vim-abolish.git'
+            UnBundle 'tpope/vim-abolish.git'
             "I sat on this plugin for 3 years before releasing it, primarily
             "because it's so gosh darn hard to explain. It's three
             "superficially unrelated plugins in one that share a common theme:
@@ -310,7 +310,7 @@
     " General Programming {
         if count(g:spf13_bundle_groups, 'programming')
             " Pick one of the checksyntax, jslint, or syntastic
-            Bundle 'scrooloose/syntastic'
+            UnBundle 'scrooloose/syntastic'
             "Syntastic is a syntax checking plugin for Vim that runs files
             "through external syntax checkers and displays any resulting
             "errors to the user. This can be done on demand, or automatically
@@ -322,10 +322,10 @@
             "I'm not going to lie to you; fugitive.vim may very well be the
             "best Git wrapper of all time.
 
-            Bundle 'mattn/webapi-vim'
+            UnBundle 'mattn/webapi-vim'
             "An Interface to WEB APIs.
 
-            Bundle 'mattn/gist-vim'
+            UnBundle 'mattn/gist-vim'
             "This is a vimscript for creating gists (http://gist.github.com).
 
             Bundle 'scrooloose/nerdcommenter'
