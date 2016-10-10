@@ -375,6 +375,11 @@
                 "their scope. This means that for example methods in C++ are
                 "displayed under the class they are defined in.
             endif
+
+            Bundle 'vivien/vim-linux-coding-style'
+            "This plugin is meant to help you respecting the Linux kernel
+            "coding style, described at:
+            "http://www.kernel.org/doc/Documentation/CodingStyle
         endif
     " }
 
