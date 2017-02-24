@@ -64,7 +64,13 @@
 
     " key (re)mappings {
 
-        nnoremap <silent> <leader>ls :LinuxCodingStyle<cr>
+        " nnoremap <silent> <leader>ls :LinuxCodingStyle<cr>
+
+    "}
+
+    " linuxsty.vim {
+
+        let g:linuxsty_patterns = [ "/linux/", "/kernel/" ]
 
     "}
 
