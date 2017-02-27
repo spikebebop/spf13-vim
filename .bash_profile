@@ -9,3 +9,8 @@ alias cls='clear'
 
 set -o vi
 
+# If ~/.bashrc exists, source it.
+
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
