@@ -37,17 +37,6 @@
 
     set nolist
 
-    " indent {
-
-        set nowrap                      " Do not wrap long lines
-        set autoindent                  " Indent at the same level of the previous line
-        set shiftwidth=4                " Use indents of 4 spaces
-        set expandtab                   " Tabs are spaces, not tabs
-        set tabstop=4                   " An indentation every four columns
-        set softtabstop=4               " Let backspace delete indent
-
-    " }
-
     " indent_guides {
 
         let g:indent_guides_enable_on_vim_startup = 0
@@ -87,7 +76,7 @@
         autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
         " ClangFormatAutoEnable will call ClangFormat when save the buf
         nmap <Leader>C :ClangFormatAutoToggle<CR>
-        autocmd FileType cpp ClangFormatAutoEnable
+        "autocmd FileType cpp ClangFormatAutoEnable
 
     "}
     " google c++ indent {
@@ -149,7 +138,6 @@
     endfunction
 
     function! GoogleCppIndentOn()
-        setlocal autoindent
         setlocal shiftwidth=2
         setlocal tabstop=2
         setlocal softtabstop=2
@@ -165,7 +153,22 @@
         let b:undo_indent = "setl sw< ts< sts< et< tw< wrap< cin< cino< inde<"
     endfunction
 
-    autocmd FileType cpp call GoogleCppIndentOn()
+    function! GoogleCppIndentOff()
+        setlocal nowrap                      " Do not wrap long lines
+        setlocal shiftwidth<                 " Use indents of 4 spaces
+        setlocal tabstop<                    " An indentation every four columns
+        setlocal softtabstop<                " Let backspace delete indent
+
+        setlocal cinoptions<
+        setlocal indentexpr<
+
+        unlet b:undo_indent
+    endfunction
+
+
+    autocmd BufNewFile,BufRead *.C,*.cpp,*.cxx,*.c++,*.cc,*.hxx,*.hpp call GoogleCppIndentOn()
+    autocmd BufNewFile,BufRead *.h command! GoogleCppIndentOn call GoogleCppIndentOn()
+    autocmd BufNewFile,BufRead *.h command! GoogleCppIndentOff call GoogleCppIndentOff()
 
     "}
 
