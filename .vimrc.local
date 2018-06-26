@@ -33,6 +33,11 @@
 "
 " Customizations by yangao118@gmail.com
 
+    color evening               " Load a colorscheme
+
+    "highlight setting for colorscheme evening
+    highlight MatchParen cterm=none ctermbg=red
+
     set nospell
 
     set nolist
